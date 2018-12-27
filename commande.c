@@ -88,19 +88,19 @@ int main(int argc,char const *argv[])
 	
 	int failed = 0;
 	if(!verifierInput(argc,argv)){
-		printf("Syntax Error : Veuillez renseinger l'option -i [-i xml/json]\n");
+		printf("Veuillez renseinger l'option -i [-i xml/json]\n");
 		failed=1;
 	}
 	if(!verifierOutput(argc,argv)){
-		printf("Syntax Error : Veuillez renseinger l'option -o [-o nomfichier.svg]\n");
+		printf("Veuillez renseinger l'option -o [-o nomfichier.svg]\n");
 		failed=1;
 	}
 	if(!verifierInput(argc,argv)){
-		printf("Syntax Error: Veuillez renseinger l'option -f [-f FichierInput]\n");
+		printf(" Veuillez renseinger l'option -f [-f FichierInput]\n");
 		failed=1;
 	}
 	if(!verifierInput(argc,argv)){
-		printf("Syntax Error: Veuillez renseinger l'option -h [-h url_HTTP]\n");
+		printf("Veuillez renseinger l'option -h [-h url_HTTP]\n");
 		failed=1;
 		}	
 
@@ -110,9 +110,7 @@ int main(int argc,char const *argv[])
 		file = fopen(getName(argc,argv),"w+");
 		printf("Bravo vous avez avez reussit\n");
 		if(Trace(argc,argv)){
-			printf("Vous avez decider d'afficher la trace !");
-		}else{
-			printf("Oups vous n'avez pas defini la trace !\n");
+			printf("Affichage de la trace !");
 		}
 	}
 	return 0;
