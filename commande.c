@@ -92,7 +92,7 @@ int main(int argc,char const *argv[])
 		failed=1;
 	}
 	if(!verifierOutput(argc,argv)){
-		printf("Vous n'avez renseinger l'option -o [-o nomfichier.svg]\n");
+		printf("Vous n'avez renseiger l'option -o [-o nomfichier.svg]\n");
 		failed=1;
 	}
 	if(!verifierInput(argc,argv)){
@@ -108,7 +108,7 @@ int main(int argc,char const *argv[])
 	if(!failed){
 		FILE* file = NULL;
 		file = fopen(getName(argc,argv),"w+");
-		printf("Bravo vous avez avez reussit\n");
+		printf("Reussit\n");
 		if(Trace(argc,argv)){
 			printf("Affichage de la trace !");
 		}
