@@ -108,7 +108,7 @@ int main(int argc,char const *argv[])
 	if(!failed){
 		FILE* file = NULL;
 		file = fopen(getName(argc,argv),"w+");
-		printf("Reussit\n");
+		printf("Reussi\n");
 		if(Trace(argc,argv)){
 			printf("Affichage de la trace !");
 		}
