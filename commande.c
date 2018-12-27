@@ -88,19 +88,19 @@ int main(int argc,char const *argv[])
 	
 	int failed = 0;
 	if(!verifierInput(argc,argv)){
-		printf("Veuillez renseinger l'option -i [-i xml/json]\n");
+		printf("Vous n'avez renseinger l'option -i [-i xml/json]\n");
 		failed=1;
 	}
 	if(!verifierOutput(argc,argv)){
-		printf("Veuillez renseinger l'option -o [-o nomfichier.svg]\n");
+		printf("Vous n'avez renseinger l'option -o [-o nomfichier.svg]\n");
 		failed=1;
 	}
 	if(!verifierInput(argc,argv)){
-		printf(" Veuillez renseinger l'option -f [-f FichierInput]\n");
+		printf("Vous n'avez renseinger l'option -f [-f FichierInput]\n");
 		failed=1;
 	}
 	if(!verifierInput(argc,argv)){
-		printf("Veuillez renseinger l'option -h [-h url_HTTP]\n");
+		printf("Vous n'avez renseinger l'option -h [-h url_HTTP]\n");
 		failed=1;
 		}	
 
