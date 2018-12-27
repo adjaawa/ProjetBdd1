@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//Verification des paramétres d'entrées
+//Verifier les paramétres d'entrées(Json ou XML)
 int verifierInput(int argc,char const *argv[]){
 	int i;
 	for (i = 1; i < argc ; i++)
 	{
 		if(strcmp("-i",argv[i])==0){ //Verification de l'input i
             if(i+1<argc){
-            	if(strcmp("xml",argv[i+1])==0 ){// si c'est un fichier xml
+            	if(strcmp("xml",argv[i+1])==0 ){// Pour un fichier xml
             		return 1;
-            	}else if (strcmp("json",argv[i+1])==0){// si c'est un fichier json
+            	}else if (strcmp("json",argv[i+1])==0){// Pour un fichier json
             		return 2;
             	}
             }
@@ -18,7 +18,7 @@ int verifierInput(int argc,char const *argv[]){
 	}
 	return 0;
 }
-//Fonction pour verifier la trace t avec comme arguments argc(nombre d'elements de argv[])
+//Verifier la trace 
 int Trace(int argc,char const *argv[]){
 	int i;
 	for (i = 1; i < argc ; i++)
@@ -29,7 +29,7 @@ int Trace(int argc,char const *argv[]){
 	}
 	return 0;
 }
-//Verification commande de sortie
+//
 int verifierOutput(int argc,char const *argv[]){
 
 	int i;
