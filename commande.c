@@ -110,7 +110,7 @@ int main(int argc,char const *argv[])
 		file = fopen(getName(argc,argv),"w+");
 		printf("Reussi\n");
 		if(Trace(argc,argv)){
-			printf("Affichage de la trace !");
+			printf("Affichage de la trace!");
 		}
 	}
 	return 0;
