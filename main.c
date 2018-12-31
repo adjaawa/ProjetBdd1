@@ -6,7 +6,7 @@ FILE *fic;
 int c;
  if (argc > 1)
     {
-        fic = fopen (argv[1], "r"); //* Ouverture du fichier
+        fic = fopen (argv[1], "r"); //Ouverture du fichier
     }
   if (fic == NULL)
     {
