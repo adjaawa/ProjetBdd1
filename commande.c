@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//Verifier l'extension de l'entrée (Json ou XML)
+//Verification de l'extension de l'entrée (Json ou XML)
 int verifierInput(int argc,char const *argv[])
 	{
 		int i;
@@ -11,16 +11,16 @@ int verifierInput(int argc,char const *argv[])
 			if(strcmp("-i",argv[i])==0)
 				{  
 					//Verification de l'input i
-					if(i+1<argc)
+					if(i+1<argc)   // Verifier le format du fichier
 						{
-							if(strcmp("xml",argv[i+1])==0)
+							if(strcmp("xml",argv[i+1])==0)// Pour un fichier xml
 								{
-									// Pour un fichier xml
+									
 									return 1;
 								}
-							else if (strcmp("json",argv[i+1])==0)
+							else if (strcmp("json",argv[i+1])==0) // Pour un fichier json
 								{
-									// Pour un fichier json
+									
 									return 2;
 								}
 						}
@@ -29,7 +29,7 @@ int verifierInput(int argc,char const *argv[])
 		return 0;
 	}
 
-//Verifie si l'utilisateur veut les traces 
+//Verification de la trace 
 int Trace(int argc,char const *argv[])
 	{
 		int i;
@@ -43,7 +43,7 @@ int Trace(int argc,char const *argv[])
 		return 0;
 	}
 
-//Vérifie que le fichier de sortie a l'extension '.svg'
+//Vérification du fichier de sortie qui a pour extension '.svg'
 int verifierOutput(int argc,char const *argv[])
 	{
 
@@ -84,7 +84,7 @@ char* getName(int argc,char const *argv[])
 		return NULL;
 	}
 
-//Recupère le nom du l'input s'il est de type fichier
+//Recupere le nom du l'input si c'est un fichier
 char* Input_Fichier_Flux(int argc,char const *argv[])
 	{
 		int i;
