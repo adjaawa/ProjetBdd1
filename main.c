@@ -33,7 +33,7 @@ int c;
         exit(1);
     	}
     	else 
-    		printf("format valide ");
+    		printf("format valide");
     		exit(1);
   return(EXIT_SUCCESS);
 }
