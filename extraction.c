@@ -22,7 +22,7 @@ int main( int, char** )
 {
   xmlDoc*  doc  = NULL;
   xmlNode* root = NULL;
-  doc = xmlReadFile( "xml_test.xml", NULL, 0 );
+  doc = xmlReadFile( "EntiteAssoc.xsd", NULL, 0 );
    
   if ( doc==NULL )
     return 0;
