@@ -1,38 +1,34 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:simpleType name="Status">
+	<xs:simpleType name="Sexe">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="Full-Time"/>
-			<xs:enumeration value="Part-Time"/>
-			<xs:enumeration value="Casual"/>
-			<xs:enumeration value="Contract"/>
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="F"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:element name="Person" type="Person"/>
-	<xs:complexType name="Person">
+	<xs:element name="Livre" type="Livre"/>
+	<xs:complexType name="Livre">
 		<xs:sequence>
-			<xs:element name="firstName" type="xs:string"/>
-			<xs:element name="surName" type="xs:string"/>
-			<xs:element name="birthDate" type="xs:string"/>
-			<xs:element name="gender" type="xs:string"/>
-			<xs:element name="contactDetails" type="ContactInfo"/>
+			<xs:element name="nom_auteur" type="xs:string"/>
+			<xs:element name="année" type="xs:date"/>
+			<xs:element name="titre" type="xs:string"/>
+			<xs:element name="nombre_page" type="xs:string"/>
+			<xs:element name="Etudiant" type="Etudiant"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="Employee" type="Employee"/>
-	<xs:complexType name="Employee">
+	<xs:element name="Revue" type="Revue"/>
+	<xs:complexType name="Revue">
 		<xs:complexContent>
-			<xs:extension base="Person">
+			<xs:extension base="Livre">
 				<xs:sequence>
-					<xs:element name="status" type="Status"/>
-					<xs:element name="jobTitle" type="xs:string"/>
-					<xs:element name="startDate" type="xs:date"/>
-					<xs:element name="department" type="xs:string"/>
+					//<xs:element name="status" type="Status"/>
+					<xs:element name="nombre_art" type="xs:string"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="EmployeeRecords" type="EmployeeRecords"/>
-	<xs:complexType name="EmployeeRecords">
+	<xs:element name="Etudiant" type="Etudiant"/>
+	<xs:complexType name="Etudiant">
 		<xs:sequence>
 			<xs:element name="Employee" type="Employee" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
