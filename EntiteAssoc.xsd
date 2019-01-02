@@ -35,7 +35,7 @@
 			<xs:element name="sexe" type="Sexe"/>
 			<xs:element name="adresse" type="xs:string"/>
 			<xs:element name="SupportNumerique" type="SupportNumerique"/>
-			<xs:element nname="Revue" type="Revue"/>
+			<xs:element name="Revue" type="Revue"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:element name="SupportNumerique" type="SupportNumerique"/>
@@ -44,7 +44,7 @@
 			<xs:element name="date_creation" type="xs:date"/>
 			<xs:element name="nombre_piste" type="xs:string"/>
 			<xs:element name="type" type="xs:string"/>
-			<xs:element name="streetAddress" type="xs:string"/>
+			
 			
 		</xs:sequence>
 	</xs:complexType>
