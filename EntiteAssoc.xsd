@@ -21,7 +21,7 @@
 		<xs:complexContent>
 			<xs:extension base="Livre">
 				<xs:sequence>
-					//<xs:element name="status" type="Status"/>
+					
 					<xs:element name="nombre_art" type="xs:string"/>
 				</xs:sequence>
 			</xs:extension>
@@ -30,16 +30,18 @@
 	<xs:element name="Etudiant" type="Etudiant"/>
 	<xs:complexType name="Etudiant">
 		<xs:sequence>
-			<xs:element name="Employee" type="Employee" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Etudiant" type="Etudiant" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="nom" type="xs:string"/>
+			<xs:element name="sexe" type="Sexe"/>
+			<xs:element name="adresse" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:element name="ContactInfo" type="ContactInfo"/>
-	<xs:complexType name="ContactInfo">
+	<xs:element name="SupportNumerique" type="SupportNumerique"/>
+	<xs:complexType name="SupportNumerique">
 		<xs:sequence>
-			<xs:element name="homePhone" type="xs:string"/>
-			<xs:element name="mobilePhone" type="xs:string"/>
-			<xs:element name="officePhone" type="xs:string"/>
-			<xs:element name="email" type="xs:string"/>
+			<xs:element name="date_creation" type="xs:date"/>
+			<xs:element name="nombre_piste" type="xs:string"/>
+			<xs:element name="type" type="xs:string"/>
 			<xs:element name="streetAddress" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
