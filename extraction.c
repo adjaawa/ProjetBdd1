@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include <libxml/parser.h>
+#include <stdlib.h>
 #include <libxml/tree.h>
  
 void print_content( xmlNode* root )
@@ -8,7 +10,7 @@ void print_content( xmlNode* root )
   {
     if ( current->type==XML_ELEMENT_NODE )
       printf( "node type: %s\n", current->name );
-    if ( strcmp((char*)current->name,"labyrinth")==0 )
+    if (strcmp((char*)current->name,"labyrinth")==0)
     {
       printf( "  length: %s\n", (const char*)xmlGetProp( current, (const xmlChar*)"length" ) );
       printf( "  width:  %s\n", (const char*)xmlGetProp( current, (const xmlChar*)"width"  ) );
@@ -18,11 +20,11 @@ void print_content( xmlNode* root )
   }
 }
  
-int main( int, char** )
+int main( int a, char** b)
 {
   xmlDoc*  doc  = NULL;
   xmlNode* root = NULL;
-  doc = xmlReadFile( "EntiteAssoc.xsd", NULL, 0 );
+  doc = xmlReadFile( "assoc.xsd", NULL, 0 );
    
   if ( doc==NULL )
     return 0;
@@ -30,6 +32,6 @@ int main( int, char** )
   root = xmlDocGetRootElement( doc );
   print_content( root );
   xmlFreeDoc( doc );
-  xmlCleanupParser();
-   
-  return 1;
+  xmlCleanupParser();  
+return 1;
+}
