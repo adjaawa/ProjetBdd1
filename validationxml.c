@@ -37,3 +37,10 @@ int validation_xml(char *xmlfile, char *xsdfile) {
 	}
 return 0;
 }
+
+int main(int argc, char** argv) {
+	char *xmlfile = argV[1];
+	char *xsdfile = argV[2];
+	validation_xml(xmlfile,xsdfile);
+	return 0;
+}
