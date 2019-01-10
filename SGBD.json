@@ -1,60 +1,79 @@
-{"donnees" : { 
-   "relations" :{
-      "relation1" :
-      {
-         "type" : "heritage",
-         "ent1" : "Employe",
-         "ent2" :"Personne",
-         "attribut": "",
-	 "cardEnt1":"1-n",
-         "cardEnt2":"1-1" 
+{
+	"donnees" : 
+	{ 
+  		 "relations" :
+		{
+    			"relation1" :
+      			{
+				"type" : "heritage",
+				"ent1" : "Employe",
+				"ent2" :"Personne",
+				"attribut": "",
+				"cardEnt1":"1-n",
+				"cardEnt2":"1-1" 
+      			}
 
-      }
-
-   },
+   		},
     
-   "entites" : {
-     "entite1" : {"nom": "Personne",
-        "attribut1" : 
-           { "nom"  :  "IdPersonne"
-           },
-        "attribut2" : 
-           { "nom"  :  "Nom"
-           },
-        "attribut3" : 
-           { "nom"  :  "prenom"
-           },
-       "attribut4" : 
-          { "nom"  :  "Adresse"
-          },
-       "attribut5" : 
-          { "nom"  :  "Numero Telephone"
-          }
+   		"entites" : 
+		{
+     			"entite1" : 
+				{
+					"nom": "Personne",
+        				"attribut1" : 
+           					{ 
+							"nom"  :  "IdPersonne"
+           					},
+        				"attribut2" : 
+           					{
+							"nom"  :  "Nom"
+           					},
+					"attribut3" : 
+						{ 
+							"nom"  :  "prenom"
+						},
+	       				"attribut4" : 
+						{ 
+							"nom"  :  "Adresse"
+						},
+					"attribut5" : 
+						{ 
+							  "nom"  :  "Numero Telephone"
+						}
                        
-     },
+     				},
  
-     "entite2" : {"nom": "Employe",
-       "attribut1" : 
-         { "nom"  :  "IdEmploye"
-         },
-       "attribut2" : 
-         { "nom"  :  "Fonction"
-         },
-       "attribut3" : 
-         { "nom"  :  "Niveau"
-         }
+     			"entite2" : 
+				{
+					"nom": "Employe",
+       					"attribut1" : 
+         					{
+							"nom"  :  "IdEmploye"
+         					},
+				       "attribut2" : 
+					 	{
+							"nom"  :  "Fonction"
+					 	},
+				       "attribut3" : 
+					 	{
+							"nom"  :  "Niveau"
+					 	}
 	
                                 
-     },
-     "entite3" : {"nom": "Ville",
-       "attribut1" : 
-         { "nom"  :  "idVille"
-         },
-       "attribut2" : 
-         { "nom"  :  "Nom"
-         }
+     				},
+			"entite3" : 
+				{
+					"nom": "Ville",
+			       		"attribut1" : 
+				 		{
+							"nom"  :  "idVille"
+				 		},
+			       		"attribut2" : 
+				 		{
+							"nom"  :  "Nom"
+				 		}
                           
-     }
-  }
-}
+     				}
+  		}
+	}
 }
