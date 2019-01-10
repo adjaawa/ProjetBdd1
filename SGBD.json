@@ -1,36 +1,60 @@
-{
-   "breakfast-menu": {
-      "food": [
-         {
-            "name": "Belgian Waffles",
-            "price": "$5.95",
-            "description": "two of our famous Belgian Waffles with plenty of real maple syrup",
-            "calories": "650"
+{"donnees" : { 
+   "relations" :{
+      "relation1" :
+      {
+         "type" : "heritage",
+         "ent1" : "Employe",
+         "ent2" :"Personne",
+         "attribut": "",
+	 "cardEnt1":"1-n",
+         "cardEnt2":"1-1" 
+
+      }
+
+   },
+    
+   "entites" : {
+     "entite1" : {"nom": "Personne",
+        "attribut1" : 
+           { "nom"  :  "IdPersonne"
+           },
+        "attribut2" : 
+           { "nom"  :  "Nom"
+           },
+        "attribut3" : 
+           { "nom"  :  "prenom"
+           },
+       "attribut4" : 
+          { "nom"  :  "Adresse"
+          },
+       "attribut5" : 
+          { "nom"  :  "Numero Telephone"
+          }
+                       
+     },
+ 
+     "entite2" : {"nom": "Employe",
+       "attribut1" : 
+         { "nom"  :  "IdEmploye"
          },
-         {
-            "name": "Strawberry Belgian Waffles",
-            "price": "$7.95",
-            "description": "light Belgian waffles covered with strawberrys and whipped cream",
-            "calories": "900"
+       "attribut2" : 
+         { "nom"  :  "Fonction"
          },
-         {
-            "name": "Berry-Berry Belgian Waffles",
-            "price": "$8.95",
-            "description": "light Belgian waffles covered with an assortment of fresh berries and whipped cream",
-            "calories": "900"
-         },
-         {
-            "name": "French Toast",
-            "price": "$4.50",
-            "description": "thick slices made from our homemade sourdough bread",
-            "calories": "600"
-         },
-         {
-            "name": "Homestyle Breakfast",
-            "price": "$6.95",
-            "description": "two eggs, bacon or sausage, toast, and our ever-popular hash browns",
-            "calories": "950"
+       "attribut3" : 
+         { "nom"  :  "Niveau"
          }
-      ]
-   }
+	
+                                
+     },
+     "entite3" : {"nom": "Ville",
+       "attribut1" : 
+         { "nom"  :  "idVille"
+         },
+       "attribut2" : 
+         { "nom"  :  "Nom"
+         }
+                          
+     }
+  }
+}
 }
