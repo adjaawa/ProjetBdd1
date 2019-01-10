@@ -10,7 +10,7 @@ int c;
     }
   if (fic == NULL)
     {
-      fprintf(stderr, "\nErreur: Impossible de lire le fichier %s\n",ENTREE);
+      fprintf(stderr, "\nErreur: Impossible de lire le fichier \n");
       return(EXIT_FAILURE);
     }
   JSON_checker jc = new_JSON_checker(20);
