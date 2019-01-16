@@ -4,18 +4,6 @@
 
 #include "json.h"
 
-/*
- * Test for json.c
- *
- * Compile (static linking) with
- *         gcc -o test_json -I.. test_json.c ../json.c -lm
- *
- * Compile (dynamic linking) with
- *         gcc -o test_json -I.. test_json.c -lm -ljsonparser
- *
- * USAGE: ./test_json <json_file>
- */
-
 static void print_depth_shift(int depth)
 {
         int j;
@@ -35,7 +23,7 @@ static void process_object(json_value* value, int depth)
         length = value->u.object.length;
         for (x = 0; x < length; x++) {
                 print_depth_shift(depth);
-                printf("object[%d].name = %s\n", x, value->u.object.values[x].name);
+                printf("%s\n", value->u.object.values[x].name);
                 process_value(value->u.object.values[x].value, depth+1);
         }
 }
@@ -73,16 +61,16 @@ static void process_value(json_value* value, int depth)
                         process_array(value, depth+1);
                         break;
                 case json_integer:
-                        printf("int: %10" PRId64 "\n", value->u.integer);
+                        printf("" PRId64 "\n", value->u.integer);
                         break;
                 case json_double:
-                        printf("double: %f\n", value->u.dbl);
+                        printf("", value->u.dbl);
                         break;
                 case json_string:
-                        printf("string: %s\n", value->u.string.ptr);
+                        printf("", value->u.string.ptr);
                         break;
                 case json_boolean:
-                        printf("bool: %d\n", value->u.boolean);
+                        printf("", value->u.boolean);
                         break;
         }
 }
@@ -129,7 +117,7 @@ int main(int argc, char** argv)
         }
         fclose(fp);
 
-        printf("%s\n", file_contents);
+        //printf("%s\n", file_contents);
 
         printf("--------------------------------\n\n");
 
