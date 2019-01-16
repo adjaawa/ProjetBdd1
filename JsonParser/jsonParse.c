@@ -119,8 +119,6 @@ int main(int argc, char** argv)
 
         //printf("%s\n", file_contents);
 
-        printf("--------------------------------\n\n");
-
         json = (json_char*)file_contents;
 
         value = json_parse(json,file_size);
