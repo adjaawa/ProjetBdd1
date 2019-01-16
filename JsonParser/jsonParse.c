@@ -61,16 +61,16 @@ static void process_value(json_value* value, int depth)
                         process_array(value, depth+1);
                         break;
                 case json_integer:
-                        printf("" PRId64 "\n", value->u.integer);
+                        printf("%ld" PRId64 "\n", value->u.integer);
                         break;
                 case json_double:
-                        printf("", value->u.dbl);
+                        printf("%f", value->u.dbl);
                         break;
                 case json_string:
-                        printf("", value->u.string.ptr);
+                        printf("%s", value->u.string.ptr);
                         break;
                 case json_boolean:
-                        printf("", value->u.boolean);
+                        printf("%d", value->u.boolean);
                         break;
         }
 }
