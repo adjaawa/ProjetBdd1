@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "JSON_checker.h"
-int main(int argc, char* argv[]) {
+
+int validateJson(char* filename) {
 FILE *fic;
 int c;
  if (argc > 1)
