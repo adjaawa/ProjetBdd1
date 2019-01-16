@@ -75,9 +75,8 @@ static void process_value(json_value* value, int depth)
         }
 }
 
-int main(int argc, char** argv)
+int parseJson(char* filename)
 {
-        char* filename;
         FILE *fp;
         struct stat filestatus;
         int file_size;
