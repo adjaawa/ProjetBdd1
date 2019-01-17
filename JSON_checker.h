@@ -6,7 +6,6 @@ typedef struct JSON_checker_struct {
     int* stack;
 } * JSON_checker;
 
-
 extern JSON_checker new_JSON_checker(int depth);
 
 /*
