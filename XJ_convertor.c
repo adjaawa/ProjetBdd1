@@ -102,8 +102,6 @@ void traverse_dom_trees(svg* psvg,xmlNode * a_node)
                 if(strcmp((const char *)cur_node->name,(const char *)"nomEntite") == 0){
                        xmlChar *a = xmlNodeGetContent(cur_node);
                        printf("Nom entite: %s\n", a);
-                       printf("jzjejejej\n");
-           
                        svg_rectangle(psvg, 150, 90, px-15, py, "#FFFFFF", "#0000FF", 2, 2, 2);
                        svg_rectangle(psvg, 150, 90, px-15, py+34, "#FFFFFF", "#0000FF", 2, 2, 2);
                        svg_text(psvg, px+15, py+15, "sans-serif", 18, "#000000", "#000000",a);
@@ -111,7 +109,6 @@ void traverse_dom_trees(svg* psvg,xmlNode * a_node)
                        
                  }
 	            else if(strcmp((const char *)cur_node->name,(const char *)"id") == 0)  {
-                		 printf("je suis en dndnd\n");
 	                    xmlChar *b = xmlNodeGetContent(cur_node);
 	                        printf("ID : %s\n", b);
 	                        
@@ -156,12 +153,12 @@ void traverse_dom_trees(svg* psvg,xmlNode * a_node)
     
 }
  //Json
-/*int validateJson(char* filename) {
+int validateJson(char * argv,int argc, char* filename) {
 FILE *fic;
 int c;
  if (argc > 1)
     {
-        fic = fopen (argv[1], "r"); //Ouverture du fichier
+        fic = fopen (argv, "r"); //Ouverture du fichier
     }
   if (fic == NULL)
     {
@@ -186,7 +183,7 @@ int c;
   fclose(fic); //Fermeture du fichier
   if (!JSON_checker_done(jc)) { /* Si chaque appelle de la fonction Json_checker_char a retourné 'vrai', la fonction Json_checker_done
   supprime le Json_checker et retourne vrai si le test Json est valide. Sinon, un message d'erreur.*/
-       /* fprintf(stderr, "JSON_checker_end: syntax error\n");
+        fprintf(stderr, "JSON_checker_end: syntax error\n");
         exit(1);
       }
       else 
@@ -194,7 +191,7 @@ int c;
         exit(1);
   return(EXIT_SUCCESS);
 }
-*/
+
 
 int main(int argc, char *argv[])
 {   
@@ -249,7 +246,7 @@ int main(int argc, char *argv[])
                 if (count_o == 1){
                     if (strcmp(file_format, "xml")==0){
                         //Validation du fichier json
-                        if(test(psvg,fichier_entree)){
+                        if(test(psvg,fichier_entree)){ 
                             printf("Fichier xml valide\n"); 
     						// svg* psvg;
    							svg* psvg = svg_create(1920, 800);
@@ -258,6 +255,21 @@ int main(int argc, char *argv[])
                              xmlNode * roo_element  = xmlDocGetRootElement(doc);
                              traverse_dom_trees(psvg, roo_element);   
    							 svg_save(psvg, "fichier.svg");
+                            
+ 							 
+                        }
+                    }
+                    else if (strcmp(file_format, "json")==0){
+                        //Validation du fichier json
+                        if(validateJson(argv[4],argc,fichier_entree)){
+                            printf("Fichier json valide\n"); 
+    						/* svg* psvg;
+   							svg* psvg = svg_create(1920, 800);
+
+                             xmlDocPtr doc = xmlReadFile(fichier_entree, NULL, XML_PARSE_NOBLANKS | XML_PARSE_NOERROR | XML_PARSE_NOWARNING | XML_PARSE_NONET);
+                             xmlNode * roo_element  = xmlDocGetRootElement(doc);
+                             traverse_dom_trees(psvg, roo_element);   
+   							 svg_save(psvg, "fichier.svg");*/
                             
  							 
                         }
