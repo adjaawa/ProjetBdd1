@@ -153,7 +153,7 @@ void traverse_dom_trees(svg* psvg,xmlNode * a_node)
     
 }
  //Json
-int validateJson(char * argv,int argc, char* filename) {
+int validateJson(int argc, char* filename) {
 FILE *fic;
 int c;
  if (argc > 1)
