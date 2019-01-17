@@ -7,31 +7,31 @@
 static void print_depth_shift(int depth)
 {
         int j;
-        for (j=0; j < depth; j++) {
+        for (j=0; j < depth; j++) { //décalage
                 printf(" ");
         }
 }
 
 static void process_value(json_value* value, int depth);
 
-static void process_object(json_value* value, int depth)
+static void process_object(json_value* value, int depth) //traite les types Objet du fichier
 {
         int length, x;
-        if (value == NULL) {
+        if (value == NULL) { //Si aucun objet n'est trouvé
                 return;
         }
         length = value->u.object.length;
-        for (x = 0; x < length; x++) {
+        for (x = 0; x < length; x++) { //affiche le nom de l'objet et effectue un decalage
                 print_depth_shift(depth);
                 printf("%s\n", value->u.object.values[x].name);
                 process_value(value->u.object.values[x].value, depth+1);
         }
 }
 
-static void process_array(json_value* value, int depth)
+static void process_array(json_value* value, int depth) //traite les types Tableau du fichier
 {
         int length, x;
-        if (value == NULL) {
+        if (value == NULL) { 
                 return;
         }
         length = value->u.array.length;
@@ -41,7 +41,7 @@ static void process_array(json_value* value, int depth)
         }
 }
 
-static void process_value(json_value* value, int depth)
+static void process_value(json_value* value, int depth) //traite les valeurs des differents types
 {
         int j;
         if (value == NULL) {
