@@ -395,7 +395,6 @@ JSON_checker_char(JSON_checker jc, int next_char)
     return TRUE;
 }
 
-
 int
 JSON_checker_done(JSON_checker jc)
 {
