@@ -110,7 +110,7 @@ void traverse_dom_trees(svg* psvg,xmlNode * a_node)
         traverse_dom_trees(psvg,cur_node->children);                            
     }
 }
-	
+
  //Validation d'un fichier Json
 int validateJson(char* argv,int argc, char* filename) {
 FILE *fic;
