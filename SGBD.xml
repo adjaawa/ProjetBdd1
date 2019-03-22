@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <diagramme>
-		<entite id="e1">
-			<nomEntite>
-				Etudiant
-			</nomEntite>
-			<attribut>
-				<id>id_etud</id>
-				<nom>nom</nom>
-				<prenom>prenom</prenom>
-			</attribut>
-		
+	<entite id="e1">
+		<nomEntite>
+			Etudiant
+		</nomEntite>
+		<attribut>
+			<id>id_etud</id>
+			<nom>nom</nom>
+			<prenom>prenom</prenom>
+		</attribut>
+	</entite>
 
-		</entite>
+	<entite id="e2">
+		<nomEntite>
+			Professeur
+		</nomEntite>
+		<attribut>
+			<id>id_prof</id>
+			<nom>nom</nom>
+			<prenom>prenom</prenom>
+		</attribut>
+	</entite>
 
-		<entite id="e2">
-			<nomEntite>
-				Professeur
-			</nomEntite>
-			<attribut>
-				<id>id_prof</id>
-				<nom>nom</nom>
-				<prenom>prenom</prenom>
-			</attribut>
-
-		</entite>
-
-		<association id="a1">
-			<nomAssos>
-				enseigner
-			</nomAssos>
-			
-		</association>
+	<association id="a1">
+		<nomAssos>
+			enseigner
+		</nomAssos>	
+	</association>
 </diagramme>
