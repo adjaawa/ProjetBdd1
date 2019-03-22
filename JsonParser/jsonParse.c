@@ -75,7 +75,6 @@ static void process_value(json_value* value, int depth) //traite les valeurs des
                         break;
         }
 }
-
 int parseJson(char* filename)
 {
         FILE *fp;
