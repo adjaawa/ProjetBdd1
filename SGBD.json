@@ -1,5 +1,5 @@
 [{
-    "etudiant": [{
+    "Etudiant": [{
         "id_etud": 9,
         "nom": "Traoré",
         "prenom": "Adja Awa",
@@ -15,7 +15,7 @@
     }
   },
   {
-    "enseignant": [{
+    "Enseignant": [{
         "id_ens": 5,
         "nom": "Mbacké",
         "prenom": "Ahmat Bamba",
